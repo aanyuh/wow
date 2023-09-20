@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>
+    <link rel="icon" href="images/favicon.ico .jpeg" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico .jpeg" type="image/x-icon">
+</head>
+<body>
+    <section>
+        <div id="sideNav">
+            <nav>
+                <ul>
+                    <li><a href="1index.html">HOME</a></li>
+                    <li><a href="2features.html">FEATURES </a></li>
+                    <li><a href="3services.html">SERVICES</a></li>
+                    <li><a href="4testimonials.html">TESTIMONIALS</a></li>
+                    <li><a href="5aboutthissite.html">ABOUT THIS SITE</a></li>
+                        <br>
+                        <small>You aren't on any core pages, but you are on the super secret log in page...
+                            <br>
+                            Don't wanna be here? That's fine, just press on one of the pages above to get back to where you were!
+                        </small>
+                        <script src="javascript.js"></script>
+                </ul>
+            </nav>
+        </div>
+        <div id="menuBtn">
+            <img src="images/menu.png" id="menu">
+        </div>
+    </section>
+
+    <div class="login-container">
+        <div id="login">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            
+                <button type="submit">Log In</button>
+            </form>            
+        </div>
+    </div>
+
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closePopup()">&times;</span>
+            <h3>Welcome to the home of Hair House!</h3>
+            <p>Thank you for logging in!</p>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
+    
+</body>
+</html>

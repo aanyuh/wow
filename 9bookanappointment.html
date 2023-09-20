@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>
+    <link rel="icon" href="images/favicon.ico .jpeg" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico .jpeg" type="image/x-icon">
+</head>
+<body id="html2-body">
+
+        <div id="sideNav">
+            <nav>
+                <ul>
+                    <li><a href="1index.html">HOME</a></li>
+                        <li><a href="2features.html">FEATURES </a></li>
+                        <li><a href="3services.html">SERVICES</a></li>
+                        <li><a href="4testimonials.html">TESTIMONIALS
+                        <li><a href="5aboutthissite.html">ABOUT THIS SITE</a></li>
+                        <small>You aren't on any core pages, but you are on the super secret appointment booking page...
+                            <br>
+                            Don't wanna be here? That's fine, just press on one of the pages above to get back to where you were!
+                        </small>
+                </ul>
+            </nav>
+        </div>
+        <div id="menuBtn">
+            <img src="images/menu.png" id="menu">
+        </div>
+
+
+   <div class="container">
+        <h1>Appointment Booking</h1>
+
+        <!-- Service Selection Form -->
+        <div class="service-selection">
+            <h2>Select a Service:</h2>
+            <form>
+                <select id="service" name="service">
+                    <option value="service1">Haircut</option>
+                    <option value="service2">Hair Dying</option>
+                    <option value="service3">Hair Spa</option>
+                    <option value="service3">Hair Styling</option>
+                </select>
+            </form>
+        </div>
+
+        <!-- Date and Time Selection -->
+        <div class="date-time-selection">
+            <h2>Select Date and Time:</h2>
+            <div id="date-buttons">
+                <!-- Date buttons generated dynamically by JavaScript -->
+            </div>
+            <div id="time-buttons">
+                <!-- Time buttons generated dynamically by JavaScript -->
+            </div>
+
+        <!-- Display Booked Appointment -->
+        <div id="appointment-details" style="display: none;">
+            <h2>Appointment Details:</h2>
+            <p><strong>Date:</strong> <span id="selected-date"></span></p>
+            <p><strong>Time:</strong> <span id="selected-time"></span></p>
+        </div>
+
+        <!-- Receipt with Price -->
+        <div id="receipt" style="display: none;">
+            <h2>Receipt:</h2>
+            <p><strong>Price:</strong> $<span id="receipt-price"></span></p>
+        </div>
+    </div>
+
+    <br>
+
+    <button type="button" id="book-button">Book Appointment</button>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closePopup()">&times;</span>
+            <p id="popup-message">Your appointment has been booked successfully.</p>
+        </div>
+    
+</div>
+
+</div>
+
+
+</body>
+</html>

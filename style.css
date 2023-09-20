@@ -1,0 +1,910 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Calibri', 'Trebuchet MS', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Header and Banner styles */
+
+#banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #6495ED), url(images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.logo {
+    width: 140px;
+    position: absolute;
+    top: 4%;
+    left: 10%;
+}
+
+.banner-text {
+    text-align: center;
+    color: white;
+    padding-top: 180px;
+}
+
+.banner-text h1 {
+    font-size: 130px;
+}
+
+.banner-text p {
+    font-size: 20px;
+    font-style: italic;
+}
+
+.banner-btn {
+    margin: 70px auto 0;
+}
+
+.banner-btn a {
+    width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 0;
+    color: #fff;
+    border: 0.5px solid #fff;
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s;
+}
+
+.banner-btn a span {
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.banner-btn a:hover span {
+    width: 100%;
+}
+
+.banner-btn a:hover {
+    color: black;
+}
+
+
+/* slidehosw */
+[data-component="slideshow"] .slide {
+    display: none;
+  }
+
+  [data-component="slideshow"] .slide.active {
+    display: block;
+  }
+  .slide img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+  }
+
+
+
+
+/* Side Navigation menu styles */
+
+#sideNav {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background: #6495ED;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 50px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+     color: #fff;
+}
+
+#menuBtn {
+    width: 50px;
+    height: 50px;
+    background: #6495ED;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    border-radius: 3px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+#menuBtn img {
+    width: 20px;
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 770px) {
+    .banner-text h1 {
+        font-size: 44px;
+    }
+
+    .banner-btn a {
+        display: block;
+        margin: 20px auto;
+    }
+}
+
+/* Feature styles */
+
+#feature {
+    width: 100%;
+    padding: 70px 0;
+}
+
+.title-text {
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.title-text p {
+    margin: auto;
+    font-size: 20px;
+    color: #6495ED;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+
+.title-text p::after {
+    content: '';
+    width: 50px;
+    height: 35px;
+    background: linear-gradient(#6495ED, #fff);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: -1;
+    transform: rotate(10deg);
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+
+.title-text h1 {
+    font-size: 50px;
+}
+
+
+/* features */
+.feature-box {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+.features {
+    flex-basis: 50%;
+}
+
+.features-img {
+    flex-basis: 50%;
+    margin: auto;
+}
+
+.features-img img {
+    width: 70%;
+    border-radius: 10px;
+}
+
+.features-img :hover{
+    scale: 1.1;
+}
+
+.features h1{
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #6495ED;
+}
+
+.features-desc{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.feature-icon {
+    width: 80px; 
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    border-radius: 8px;
+    color: #6495ED;
+    border: 1px solid #6495ED;
+}
+.feature-text p{
+    padding: 0 20px;
+    text-align: initial;
+}
+@media screen and (max-width: 770px) {
+    .title-text h1 {
+        font-size: 35px;
+    }  
+    .features {
+        flex-basis: 100%;
+    } 
+    .features-img {
+        flex-basis: 100%;
+    }
+    .features-img img {
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+.feature-icon:hover {
+    transform: scale(5) rotate(360deg);
+    transition: transform 0.3s ease;
+}
+
+
+/* service */
+#service{
+    width: 100%;
+    padding: 70px 0;
+}
+.service-box{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+.single-service{
+    flex-basis: 48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: white;
+    position: relative;
+}
+.single-service img{
+    width: 100%;
+    border-radius: 7px;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(rgba(0,0,0,0.5), #6495ED);
+    opacity: 0;
+    transition: 1s;
+}
+.single-service:hover .overlay{
+    opacity: 1;
+}
+.service-desc{
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: 1s;
+}
+hr{
+    background: white;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 60px;
+}
+.service-desc p{
+   font-size: 14px; 
+}
+.single-service:hover .service-desc{
+    bottom: 40%;
+    opacity: 1;
+}
+
+/* Define the animation */
+@keyframes serviceAnimation {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to each service box */
+.single-service {
+    animation: serviceAnimation 0.5s ease-in-out;
+    animation-fill-mode: both;
+    opacity: 0; 
+    display: inline-block; /* To ensure the boxes appear inline */
+}
+
+/* delay for each service box */
+.single-service:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.single-service:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.single-service:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+.single-service:nth-child(4) {
+    animation-delay: 2s;
+}
+
+
+
+@media screen and (max-width: 770px){
+    .single-service{
+        flex-basis: 100%;
+        margin: 30px;
+    }
+    .service-desc p{
+        font-size: 12px; 
+     }
+     hr{
+        margin: 5px auto;
+     }
+     .single-service:hover .service-desc{
+        bottom: 25% !important;
+    }
+}
+
+/* testimonials */
+
+#testimonial{
+    width: 100%;
+    padding: 70px 0;
+}
+.testimonial-row{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.testimonial-col {
+    flex-basis: 28%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 3px #6495ED;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.testimonial-col p{
+   font-size: 14px;
+}
+.user{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.user img{
+    width: 40px;
+    margin-right: 20px;
+    border-radius: 3px;
+}
+.user-info img{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+.user-info small{
+    color: #6495ED;
+}
+
+.testimonial-row .testimonial-col {
+    animation: burstAnimation 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes burstAnimation {
+    0% {
+        transform: translateY(100%) translateX(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+    }
+}
+
+.testimonial-row .testimonial-col:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.testimonial-row .testimonial-col:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+.testimonial-row .testimonial-col:nth-child(4) {
+    animation-delay: 1.2s;
+}
+
+.testimonial-row .testimonial-col:nth-child(5) {
+    animation-delay: 1.6s;
+}
+
+.testimonial-row .testimonial-col:nth-child(6) {
+    animation-delay: 2s;
+}
+
+.testimonial-col:hover {
+    transform: translateY(-7px) !important;
+}
+
+@media screen and (max-width: 770px){
+    .testimonial-col{
+        flex-basis: 100%;
+    }
+}
+
+/* footer */
+
+#footer{
+    padding: 100px 0 20px;
+    background: #efefef;
+    position: relative;
+}
+.footer-row{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-left, footer-right{
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.footer-right{
+    text-align: right;
+}
+.footer-row h1{
+    margin: 10px 0;
+}
+.footer-row p{
+    line-height: 35px;
+}
+.footer-img{
+    max-width: 270px;
+    opacity: 0.1;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.footer-title-text {
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.footer-title-text p {
+    margin: auto;
+    font-size: 20px;
+    color: #6495ED;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+
+.footer-title-text h1 {
+    font-size: 50px;
+}
+
+@media screen and (max-width: 770px){
+    .footer-left,.footer-right{
+        flex-basis: 100%;
+        font: 14px;
+    }
+    .footer-img{
+        top: 25%;
+    }
+}
+
+
+/* sign up */
+
+/* Apply styles to the body and html elements */
+.signup-container body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px; 
+    background: linear-gradient(to bottom, #ffffff, #6495ED); 
+}
+
+#signup {
+    background-color:#ffffff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+}
+
+/* box-sizing and width of input elements */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: calc(100% - 22px); 
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+/*Submit Button */
+#signup button[type="submit"] {
+    background-color: #6495ED; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 12px 20px; /* Button padding */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Add button border radius */
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease; /* Add a smooth hover transition */
+}
+
+#signup button[type="submit"]:hover {
+    background-color: #4169E1; /* Darker shade on hover */
+}
+
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    text-align: center;
+}
+
+.popup-content {
+    background-color: #fff;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+/* log in */
+/* Apply styles to the body and html elements */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Center the login container vertically and horizontally */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ffffff, #6495ED);
+}
+
+#login {
+    background-color: #ffffff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style input fields */
+#login label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#login input[type="text"],
+#login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Style the submit button */
+#login button[type="submit"] {
+    background-color: #6495ED;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+#login button[type="submit"]:hover {
+    background-color: #4169E1;
+}
+
+
+
+
+/* book app */
+
+/* Reset default margin and padding for HTML code 2 */
+#html2-body, #html2-body h1, #html2-body h2, #html2-body p, #html2-body button, #html2-body select {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for HTML code 2 body */
+#html2-body {
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ffffff, #6495ED);
+}
+
+/* Container styling for HTML code 2 */
+#html2-body .container {
+    max-width: 400px;
+    max-height: 780px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Heading styles for HTML code 2 */
+#html2-body h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#html2-body h2 {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Form styles for HTML code 2 */
+#html2-body form {
+    display: flex;
+    flex-direction: column;
+}
+
+#html2-body label {
+    margin-bottom: 5px;
+}
+
+#html2-body select, #html2-body button {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Styles for date buttons for HTML code 2 */
+#html2-body .date-button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #ccc;
+    color: black;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+}
+
+#html2-body .date-button:hover {
+    background-color: black;
+    color: white;
+}
+
+#html2-body .date-button.selected {
+    background-color: #6495ED;
+    color: #fff;
+}
+
+/* Styles for time buttons for HTML code 2 */
+#html2-body .time-button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #ccc;
+    color: black;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#html2-body .time-button:hover {
+    background-color: black;
+    color: white;
+}
+
+#html2-body .time-button.selected {
+    background-color: #6495ED;
+    color: #fff;
+}
+
+/* Appointment Details and Receipt styles for HTML code 2 */
+#html2-body #appointment-details, #html2-body #receipt {
+    margin-top: 20px;
+}
+
+/* Receipt Price styling for HTML code 2 */
+#html2-body #receipt-price {
+    font-weight: bold;
+    color: #6495ED;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Responsive styling for smaller screens for HTML code 2 */
+@media (max-width: 480px) {
+    #html2-body .container {
+        padding: 10px;
+    }
+
+    #html2-body h1 {
+        font-size: 20px;
+    }
+
+    #html2-body h2 {
+        font-size: 16px;
+    }
+
+    #html2-body select, #html2-body button {
+        font-size: 14px;
+    }
+}
+
+/* about this site */
+.ats-title-text p {
+    text-align: center;
+    margin: auto;
+    font-size: 20px;
+    padding: 20px 0 0 0;
+    color: #6495ED;
+    font-weight: bold;
+    position: relative;
+}
+
+.ats-title-text h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.bullet-list p {
+    list-style-type: disc;
+    margin-left: 20px; /* Adjust the left margin as needed */
+}
+
+
+/* Set a background color and text color for the entire page */
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Style the body content */
+.ats-body {
+    padding: 20px;
+}
+
+ats-body h1 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+}
+
+ats-body p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+
+/* Style bonus criteria sections */
+h2 {
+    font-size: 20px;
+    color: #6495ED;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* Style images and sourcing section  */
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Add spacing between items */
+}
+
+.item img {
+    max-height: 100px; /* Adjust the maximum height for images */
+    margin-right: 20px; /* Add spacing between image and text */
+}
+
+
+/* Media query for responsive design */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .ats-title-text h1 {
+        font-size: 28px;
+    }
+}
+
